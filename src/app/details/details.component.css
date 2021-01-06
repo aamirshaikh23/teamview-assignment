@@ -1,0 +1,84 @@
+.result-listing {
+    height: calc(100vh - 270px);
+    overflow: auto;
+    margin: 1px 1px 6px;
+}
+
+.result.card {
+    margin: 16px 0px 5px;
+    padding: 18px;
+    color: #434343;
+    border: none;
+    border-radius: 8px;
+}
+
+.chip{
+    display: inline-flex;
+    flex-direction: row;
+    background-color: #e5e5e5;
+    border: none;
+    cursor: default;
+    height: 36px;
+    outline: none;
+    padding: 0;
+    font-size: 14px;
+    color: #333333;
+    font-family:"Open Sans", sans-serif;
+    white-space: nowrap;
+    align-items: center;
+    border-radius: 16px;
+    vertical-align: middle;
+    text-decoration: none;
+    justify-content: center;
+}
+
+.chip-content{
+    cursor: inherit;
+    display: flex;
+    align-items: center;
+    user-select: none;
+    white-space: nowrap;
+    padding-left: 12px;
+    padding-right: 12px;
+}
+
+.nodata{
+    width: 10pc;
+    display: block;
+    text-align: center;
+    margin: 10pc auto;
+}
+
+.ques-title:hover {
+    color: #8e26d0;
+    text-decoration: underline;
+    cursor: pointer;
+}
+
+.ques-title{
+    color: #333333;
+}
+
+li.chips {
+    display: inline-flex;
+    flex-direction: row;
+    background-color: #e5e5e5;
+    border: none;
+    cursor: default;
+    font-size: 12px;
+    outline: none;
+    border-radius: 18px;
+    padding: 5px 12px;
+    background: #eedcff;
+    color: #733371;
+    margin-right: 7px;
+    margin-top: 6px;
+}
+
+.view-count {
+    color: grey;
+    font-size: 11px;
+    position: absolute;
+    right: 5px;
+    top: 6px;
+}

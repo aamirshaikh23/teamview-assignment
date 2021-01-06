@@ -1,0 +1,159 @@
+<div class="main">
+  <div class="container">
+    <div class="row">
+      <div class="col-md-11">
+        <h4 class="main-heading">ASSIGNMENT - <b style="color: #be63f8;">Stackoverflow Questions Search</b></h4>
+      </div>
+      <div class="col-md-1">
+        <span class="user">Aamir</span>
+      </div>
+    </div>
+    <div class="row mt-20">
+      <div class="col-md-2 main-filter">
+        <div class="filter">
+          <div class="filter-head">
+            Accepted
+          </div>
+          <div class="filter-options">
+            <select name="accepted" id="accepted" [(ngModel)]="filter.accepted">
+              <option disabled value="">Select</option>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Answers
+          </div>
+          <div class="filter-options">
+            <input type="number" [(ngModel)]="filter.answers">
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Body
+          </div>
+          <div class="filter-options">
+            <input type="text" [(ngModel)]="filter.body">
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Closed
+          </div>
+          <div class="filter-options">
+            <select name="closed" id="closed" [(ngModel)]="filter.closed">
+              <option disabled value="">Select</option>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Migrated
+          </div>
+          <div class="filter-options">
+            <select name="Migrated" id="Migrated" [(ngModel)]="filter.migrated">
+              <option disabled value="">Select</option>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Notice
+          </div>
+          <div class="filter-options">
+            <select name="Notice" id="Notice" [(ngModel)]="filter.notice">
+              <option disabled value="">Select</option>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Not tagged
+          </div>
+          <div class="filter-options">
+            <input type="text" [(ngModel)]="filter.nottagged">
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Tagged
+          </div>
+          <div class="filter-options">
+            <input type="text" [(ngModel)]="filter.tagged">
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Title
+          </div>
+          <div class="filter-options">
+            <input type="text" [(ngModel)]="filter.title">
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            User
+          </div>
+          <div class="filter-options">
+            <input type="number" [(ngModel)]="filter.user">
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            URL
+          </div>
+          <div class="filter-options">
+            <input type="url" [(ngModel)]="filter.url">
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Views
+          </div>
+          <div class="filter-options">
+            <input type="number" [(ngModel)]="filter.views">
+          </div>
+        </div>
+        <div class="filter">
+          <div class="filter-head">
+            Wiki
+          </div>
+          <div class="filter-options">
+            <select name="Wiki" id="Wiki" [(ngModel)]="filter.wiki">
+              <option disabled value="">Select</option>
+              <option value="true">True</option>
+              <option value="false">False</option>
+            </select>
+          </div>
+        </div>
+      </div>
+      <div class="col-md-10">
+        <div>
+          <input type="search" [(ngModel)]="filter.q" placeholder="Search..." (keyup.enter)="search()">
+          <button class="btn search" (click)="search()"><i class="fa fa-search" aria-hidden="true"></i></button>
+        </div>
+        <div class="listing">
+          <span class="results-found">{{search_results.length}} results</span> <span class="sorting">Sort By <select
+              name="sorting" id="sorting" [(ngModel)]="filter.sort">
+              <option value="activity">Activity</option>
+              <option value="votes">Votes</option>
+              <option value="creation">Creation</option>
+              <option value="relevance">Relevance</option>
+            </select></span>
+          <app-details [search_results]="search_results"></app-details>
+        </div>
+      </div>
+    </div>
+  </div>
+  <ngx-spinner bdColor="rgba(0, 0, 0, 0.8)" size="medium" color="#fff" type="square-jelly-box" [fullScreen]="true">
+    <p style="color: rgb(254, 212, 255)"> Fetching Questions... </p>
+  </ngx-spinner>
+</div>

@@ -1,1 +1,65 @@
 /* You can add global styles to this file, and also import other style files */
+select {
+    color: #b0b0b0;
+    background: none;
+    border: none;
+}
+
+input[type="search"] {
+    width: 100%;
+    border: none;
+    font-size: 15px;
+    border-radius: 15px;
+    box-shadow: 0 5px 6px -6px #777;
+    padding: 9px 15px;
+    outline: none;
+}
+
+input[type="text"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="number"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="date"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+input[type="url"] {
+    width: 100%;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+}
+
+
+.mt-20 {
+    margin-top: 40px;
+}
+
+.ngx-pagination .current {
+    background: #be63f8 !important;
+}
+
+.center{
+    display: block;
+    text-align: center;
+}
+
+::-webkit-scrollbar {
+    -webkit-appearance: none;
+    width: 10px;
+  }
+  
+  ::-webkit-scrollbar-thumb {
+    border-radius: 5px;
+    background-color: rgba(0,0,0,.5);
+    -webkit-box-shadow: 0 0 1px rgba(255,255,255,.5);
+  }

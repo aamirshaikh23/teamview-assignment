@@ -1,0 +1,16 @@
+<div class="result-listing" *ngIf="search_results.length !== 0">
+  <div class="result card" *ngFor="let item of search_results | paginate: { itemsPerPage: 10, currentPage: p }">
+    <div><a href="{{item.link}}" class="ques-title" target="_blank">{{item.title}}</a></div>
+    <div>
+      <li class="chips" *ngFor="let tag of item.tags">{{tag}}</li>
+    </div>
+    <div class="view-count">
+      <i class="fa fa-eye" aria-hidden="true"></i> {{item.view_count}}
+    </div>
+  </div>
+</div>
+<pagination-controls class="center" (pageChange)="p = $event" *ngIf="search_results.length !== 0">
+</pagination-controls>
+<div *ngIf="search_results.length == 0">
+  <img class="nodata" src="assets/icons/nodata.svg" alt="">
+</div>
